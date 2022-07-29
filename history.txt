@@ -1,0 +1,36 @@
+    1  docker
+    2  sudo apt update
+    3  sudo apt install docker.io
+    4  docker
+    5  clear
+    6  docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+    7  sudo docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+    8  cat /var/jenkins_home/secrets/initialAdminPassword
+    9  docker ps
+   10  sudo docker ps
+   11  clear
+   12  sudo docker ps
+   13  sudo docker exec -it bf34a724003d bash 
+   13  ls -l /var/run/docker.sock
+   13  exit
+   13  docker exec -u 0 -it a1b404f2bb09 bash
+   13  chmod 666 /var/run/docker.sock
+   14  sudo su
+   15  docker ps
+   16  sudo su
+   17  docker ps
+   18  ls
+   19  ls -a
+   20  docker container ls -s
+   21  docker volume ls
+   22  docker volume ls -s
+   23  pwd
+   24  history
+   25  docker export c6c607c5ecfd > jenkins220722.tar 
+   26  ls
+   27  ls -l
+   28  ls -s
+   29  scp azureuser@jenkins:jenkins220722.tar ~
+   30  scp -r azureuser@jenkins:jenkins220722.tar ~
+   31  history > history.txt
+   32  docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock  -v $(which docker):/usr/bin/docker jenkins/jenkins:lts
